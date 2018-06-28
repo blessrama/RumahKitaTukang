@@ -71,7 +71,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/profil_nama_tukang"
+                        android:id="@+id/worker_profile_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
@@ -82,7 +82,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/profil_email_tukang"
+                        android:id="@+id/worker_profile_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
@@ -109,7 +109,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/profil_tukang_jumlah_kontrak_selesai"
+                        android:id="@+id/worker_profile_contract_done"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
@@ -141,7 +141,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/profil_tukang_jumlah_kontrak_berjalan"
+                        android:id="@+id/worker_contract_ongoing"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -183,7 +183,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/profil_no_telepon_tukang"
+                    android:id="@+id/worker_profile_phone_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end"
@@ -216,7 +216,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/profil_alamat_rumah_tukang"
+                    android:id="@+id/worker_profile_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="start"
@@ -251,7 +251,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/profil_deskripsi_tukang"
+                    android:id="@+id/worker_profile_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="start"
