@@ -3,7 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="logout_settings">Logout</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_login">Sign in</string>
 
@@ -19,7 +18,23 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- Strings related to home -->
+    <string name="availability_status">"Worker's availability status</string>
+    <string name="availability_hint">Nyalakan status bekerja untuk menemukan pekerjaan yang sesuai sekarang juga!</string>
     <string name="title_activity_sign_up">Sign Up</string>
     <string name="hint_search">Cari Alamat</string>
     <string name="hint_range">Rentang Harga</string>
+    <string-array name="jobs_array">
+        <item>Semua</item>
+        <item>AC</item>
+        <item>Elektrikal</item>
+        <item>Ledeng</item>
+        <item>Taman</item>
+    </string-array>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
