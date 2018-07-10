@@ -1,4 +1,4 @@
-package blessrama.pkm.rumahkitatukang;
+package blessrama.pkm.rumahkitatukang.fragment;
 
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -20,7 +20,11 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class HistoryActivity extends AppCompatActivity {
+import blessrama.pkm.rumahkitatukang.HistoryTab1;
+import blessrama.pkm.rumahkitatukang.HistoryTab2;
+import blessrama.pkm.rumahkitatukang.R;
+
+public class HistoryFragment extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -36,6 +40,10 @@ public class HistoryActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+
+    public HistoryFragment() {
+        // Required empty public constructor
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +66,6 @@ public class HistoryActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

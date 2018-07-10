@@ -19,7 +19,7 @@
         completions."
     </string>
 
-    <!-- Strings related to home -->
+    <!-- Strings related to HomeFragment -->
     <string name="availability_status">"Worker's availability status</string>
     <string name="availability_hint">Nyalakan status bekerja untuk menemukan pekerjaan yang sesuai sekarang juga!</string>
     <string name="title_activity_sign_up">Sign Up</string>
@@ -32,7 +32,7 @@
         <item>Ledeng</item>
         <item>Taman</item>
     </string-array>
-    <string name="title_activity_history">HistoryActivity</string>
+    <string name="title_activity_history">HistoryFragment</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
