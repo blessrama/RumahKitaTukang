@@ -19,6 +19,8 @@
         completions."
     </string>
 
+    <string name="google_maps_key">AIzaSyDazj4mIkDZMLbbMTuFwhOuCaN-y0MXV6Q</string>
+
     <!-- Strings related to HomeFragment -->
     <string name="availability_status">"Worker's availability status</string>
     <string name="availability_hint">Nyalakan status bekerja untuk menemukan pekerjaan yang sesuai sekarang juga!</string>
@@ -37,4 +39,5 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_customer_maps">Map</string>
 </resources>
