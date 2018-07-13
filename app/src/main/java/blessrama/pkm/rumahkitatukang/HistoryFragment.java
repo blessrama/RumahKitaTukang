@@ -20,11 +20,12 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import blessrama.pkm.rumahkitatukang.HistoryPagerAdapter;
 import blessrama.pkm.rumahkitatukang.HistoryTab1;
 import blessrama.pkm.rumahkitatukang.HistoryTab2;
 import blessrama.pkm.rumahkitatukang.R;
 
-public class HistoryFragment extends AppCompatActivity {
+public class HistoryFragment extends Fragment {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -117,10 +118,23 @@ public class HistoryFragment extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_history, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-            return rootView;
+            View view = inflater.inflate(R.layout.fragment_history, container, false);
+
+            // Find the view pager that will allow the user to swipe between fragments
+            ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
+
+            // Create an adapter that knows which fragment should be shown on each page
+            HistoryPagerAdapter adapter = new HistoryPagerAdapter(getActivity(), getChildFragmentManager());
+
+            // Set the adapter onto the view pager
+            viewPager.setAdapter(adapter);
+
+            // Give the TabLayout the ViewPager
+            TabLayout tabLayout = (TabLayout) view.findViewById(R.id.sliding_tabs);
+            tabLayout.setupWithViewPager(viewPager);
+            // Inflate the layout for this fragment
+
+            return view;
         }
     }
 

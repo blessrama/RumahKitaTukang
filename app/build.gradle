@@ -73,7 +73,7 @@ dependencies {
     implementation "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
     annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
 
-    testImplementation 'junit:junit:4.12'
+    //google maps implementation
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
 
     //rxjava & rx android implementation

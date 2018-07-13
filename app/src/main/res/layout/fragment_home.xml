@@ -47,6 +47,7 @@ tools:context=".HomeFragment">
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/view_status"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
             android:layout_height="match_parent"

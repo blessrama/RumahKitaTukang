@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.faturrahman.rumahkita.R;
+import blessrama.pkm.rumahkitatukang.R;
 
 public class DalamProsesFragment extends Fragment {
     public DalamProsesFragment() {

@@ -5,9 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.faturrahman.rumahkita.R;
-import com.example.faturrahman.rumahkita.fragment.DalamProsesFragment;
-import com.example.faturrahman.rumahkita.fragment.SelesaiFragment;
+import blessrama.pkm.rumahkitatukang.R;
+import blessrama.pkm.rumahkitatukang.DalamProsesFragment;
+import blessrama.pkm.rumahkitatukang.SelesaiFragment;
 
 public class HistoryPagerAdapter extends FragmentPagerAdapter {
 
