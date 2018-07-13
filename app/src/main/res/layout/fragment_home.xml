@@ -4,7 +4,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
-tools:context=".home">
+tools:context=".HomeFragment">
 
 <android.support.v7.widget.Toolbar
     android:layout_width="match_parent"
@@ -47,11 +47,51 @@ tools:context=".home">
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/view_status"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Status:"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/availability_status"/>
+
+            <Switch
+                android:id="@+id/availability_worker"
+                android:layout_marginStart="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="15dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginEnd="15dp"
-            android:layout_marginStart="15dp">
+            android:background="@drawable/hiasan_abu2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:text="@string/availability_hint"/>
 
         </LinearLayout>
 
