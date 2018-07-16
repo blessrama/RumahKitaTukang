@@ -38,8 +38,7 @@
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:text="Listrik"
-                        android:layout_marginBottom="5dp">
-                    </TextView>
+                        android:layout_marginBottom="5dp"/>
 
                     <TextView
                         android:layout_marginBottom="2dp"
