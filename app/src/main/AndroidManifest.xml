@@ -52,7 +52,6 @@
             android:name=".CustomerMapsActivity"
             android:label="@string/title_activity_customer_maps" />
         <activity android:name=".fragment.ProfileFragment" />
-        <activity android:name=".fragment.HomeFragment2" />
         <activity android:name=".fragment.HomeFragment" />
         <activity android:name=".fragment.HistoryTab1" />
         <activity android:name=".fragment.HistoryTab2" />
