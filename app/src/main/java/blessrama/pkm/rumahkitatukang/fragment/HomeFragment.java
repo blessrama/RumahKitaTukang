@@ -1,31 +1,22 @@
 package blessrama.pkm.rumahkitatukang.fragment;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
-import android.support.design.widget.TabLayout;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.Toolbar;
+import android.widget.Switch;
 
-import android.support.v4.view.ViewPager;
-import android.view.Menu;
-import android.view.MenuItem;
-
-import android.widget.TextView;
 import blessrama.pkm.rumahkitatukang.R;
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class HomeFragment extends Fragment {
-
+    private Switch sw;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -36,6 +27,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
+
     }
 
     @Override
@@ -44,4 +36,16 @@ public class HomeFragment extends Fragment {
         ButterKnife.bind(this, view);
 
     }
+
+    @OnClick(R.id.availability_worker)
+    public void onClick(){
+        if (sw.isChecked()){
+            Intent intent = new Intent(HomeFragment.this.getActivity(), HomeFragment2.class);
+            startActivity(intent);
+        }
+    }
+
+
+
+
 }

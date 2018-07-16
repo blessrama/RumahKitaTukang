@@ -5,9 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import blessrama.pkm.rumahkitatukang.R;
-import blessrama.pkm.rumahkitatukang.DalamProsesFragment;
-import blessrama.pkm.rumahkitatukang.SelesaiFragment;
+import blessrama.pkm.rumahkitatukang.fragment.HistoryTab1;
+import blessrama.pkm.rumahkitatukang.fragment.HistoryTab2;
 
 public class HistoryPagerAdapter extends FragmentPagerAdapter {
 
@@ -22,9 +21,9 @@ public class HistoryPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new DalamProsesFragment();
+            return new HistoryTab1();
         } else {
-            return new SelesaiFragment();
+            return new HistoryTab2();
         }
     }
 

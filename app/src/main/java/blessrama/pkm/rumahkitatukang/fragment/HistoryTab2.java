@@ -1,25 +1,21 @@
-package blessrama.pkm.rumahkitatukang;
+package blessrama.pkm.rumahkitatukang.fragment;
 
-import android.content.Context;
-import android.net.Uri;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import blessrama.pkm.rumahkitatukang.R;
 
-public class SelesaiFragment extends Fragment {
-    public SelesaiFragment() {
+public class HistoryTab2 extends Fragment {
+    public HistoryTab2() {
 
     }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_selesai, container, false);
+        View rootView = inflater.inflate(R.layout.history_tab2_done, container, false);
         return rootView;
     }
 }

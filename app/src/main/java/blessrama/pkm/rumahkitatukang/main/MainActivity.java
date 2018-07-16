@@ -10,12 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import blessrama.pkm.rumahkitatukang.fragment.ChatFragment;
 import blessrama.pkm.rumahkitatukang.fragment.HistoryFragment;
 import blessrama.pkm.rumahkitatukang.fragment.HomeFragment;
 import blessrama.pkm.rumahkitatukang.fragment.ProfileFragment;
+import blessrama.pkm.rumahkitatukang.R;
 import blessrama.pkm.rumahkitatukang.utils.BottomNavigationUtils;
 
-import blessrama.pkm.rumahkitatukang.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -108,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
-
     }
 
     private void inflateInitialFragment() {
@@ -126,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
 //                isTabClick = true;
 
                 switch (item.getItemId()) {
-
                     case R.id.home_button:
                         replaceFragment(new HomeFragment());
 //                        mViewPager.setCurrentItem(0);
@@ -139,11 +138,11 @@ public class MainActivity extends AppCompatActivity {
 //                        bottomNavigationView.setSelectedItemId(R.id.chat_button);
                         break;
 
-//                  case R.id.chat_button:
-//                      replaceFragment(new ChatFragment());
-////                      mViewPager.setCurrentItem(2);
-////                      bottomNavigationView.setSelectedItemId(R.id.history_button);
-//                      break;
+                  case R.id.chat_button:
+                      replaceFragment(new ChatFragment());
+//                      mViewPager.setCurrentItem(2);
+//                      bottomNavigationView.setSelectedItemId(R.id.history_button);
+                      break;
 
                     case R.id.profil_button:
                         replaceFragment(new ProfileFragment());
@@ -156,7 +155,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();

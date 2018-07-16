@@ -28,7 +28,7 @@ android {
 
 dependencies {
 
-    final BUTTERKNIFE_VERSION = '8.4.0'
+    final BUTTERKNIFE_VERSION = '8.8.1'
     final SUPPORT_LIBRARY_VERSION = '27.1.1'
     final PLAY_SERVICES_VERSION = '15.0.1'
     final FIREBASE_CORE_VERSION = '16.0.1'
@@ -44,7 +44,7 @@ dependencies {
 //    firebase implementation
     implementation "com.google.firebase:firebase-core:$FIREBASE_CORE_VERSION"
     implementation "com.google.firebase:firebase-database:$FIREBASE_VERSION"
-    implementation "com.google.firebase:firebase-firestore:17.0.2"
+    implementation "com.google.firebase:firebase-firestore:17.0.3"
     implementation "com.google.firebase:firebase-storage:$FIREBASE_VERSION"
     implementation "com.google.firebase:firebase-auth:16.0.2"
     implementation "com.google.firebase:firebase-messaging:17.1.0"
@@ -70,8 +70,8 @@ dependencies {
     implementation "com.jakewharton.rxbinding2:rxbinding:$RX_BINDING_VERSION"
 
     //butterknife implementation
-    implementation "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
-    annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
+    implementation "com.jakewharton:butterknife:8.8.1"
+    annotationProcessor "com.jakewharton:butterknife-compiler:8.8.1"
 
     //google maps implementation
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
