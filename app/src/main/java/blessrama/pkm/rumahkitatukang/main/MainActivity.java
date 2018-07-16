@@ -15,7 +15,6 @@ import blessrama.pkm.rumahkitatukang.fragment.HistoryFragment;
 import blessrama.pkm.rumahkitatukang.fragment.HomeFragment;
 import blessrama.pkm.rumahkitatukang.fragment.ProfileFragment;
 import blessrama.pkm.rumahkitatukang.R;
-import blessrama.pkm.rumahkitatukang.utils.BottomNavigationUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
