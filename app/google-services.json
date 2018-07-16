@@ -23,6 +23,22 @@
           }
         },
         {
+          "client_id": "214398173921-itltjkapv5b97hb1ubo6q7o829opc07k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "blessrama.pkm.rumahkitatukang",
+            "certificate_hash": "e7cd6558272ea0ac2c58635ca39b87a2ea1786ca"
+          }
+        },
+        {
+          "client_id": "214398173921-s2kqhlg4jgdmeol4ommul0hornkjf4rm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "blessrama.pkm.rumahkitatukang",
+            "certificate_hash": "6aef4afce432d56c360e154cb7750eabe895ffd9"
+          }
+        },
+        {
           "client_id": "214398173921-p3qpedsv6sdi16d5i5c2tl1ohdiuel9m.apps.googleusercontent.com",
           "client_type": 3
         }

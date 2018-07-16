@@ -1,4 +1,4 @@
-package blessrama.pkm.rumahkitatukang.main;
+package blessrama.pkm.rumahkitatukang.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

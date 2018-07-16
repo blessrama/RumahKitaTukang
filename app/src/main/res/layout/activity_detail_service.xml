@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DetailServiceActivity">
+
+    <TextView
+        android:id="@+id/txtJobId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Job ID"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtConsumerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consumer name" />
+
+    <TextView
+        android:id="@+id/txtWorkLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Work location" />
+
+    <Button
+        android:id="@+id/btnTakeJob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AMBIL PEKERJAAN" />
+</LinearLayout>

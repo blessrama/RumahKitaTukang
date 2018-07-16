@@ -16,21 +16,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.MainActivity"
-                  android:theme="@style/AppTheme.NoActionBar">
-                  <intent-filter>
-                      <action android:name="android.intent.action.MAIN" />
-                  </intent-filter>
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".intro.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".fragment.HistoryFragment"
             android:label="@string/title_activity_history"
@@ -55,8 +56,9 @@
         <activity android:name=".fragment.HomeFragment" />
         <activity android:name=".fragment.HistoryTab1" />
         <activity android:name=".fragment.HistoryTab2" />
-        <activity android:name=".layanan" />
         <activity android:name=".fragment.ChatFragment" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.DetailServiceActivity"></activity>
     </application>
 
 </manifest>
