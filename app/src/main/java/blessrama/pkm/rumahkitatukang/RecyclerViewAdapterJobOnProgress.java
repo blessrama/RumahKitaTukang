@@ -33,10 +33,10 @@ public class RecyclerViewAdapterJobOnProgress extends RecyclerView.Adapter<Recyc
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Job job = jobList.get(position);
         holder.txtJobId.setText(job.getId());
+        holder.txtConsumerName.setText(job.getConsumerId());
         holder.txtJobCategory.setText(job.getJobCategory());
         holder.txtWorkLocation.setText(job.getLocation());
         holder.txtWorkStatus.setText(job.getStatus());
-        holder.txtConsumerName.setText(job.getConsumerId());
     }
 
     @Override
@@ -46,17 +46,17 @@ public class RecyclerViewAdapterJobOnProgress extends RecyclerView.Adapter<Recyc
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView txtJobId;
+        private TextView txtConsumerName;
         private TextView txtJobCategory;
         private TextView txtWorkLocation;
         private TextView txtWorkStatus;
-        private TextView txtConsumerName;
         public ViewHolder(View itemView) {
             super(itemView);
             txtJobId = itemView.findViewById(R.id.txtJobId);
+            txtConsumerName = itemView.findViewById(R.id.txtConsumerName);
             txtJobCategory = itemView.findViewById(R.id.txtJobCategory);
             txtWorkLocation = itemView.findViewById(R.id.txtWorkLocation);
             txtWorkStatus = itemView.findViewById(R.id.txtWorkStatus);
-            txtConsumerName = itemView.findViewById(R.id.txtConsumerName);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

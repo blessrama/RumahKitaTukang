@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(LoginActivity.this);
         progressDialog.setCancelable(false);
-        progressDialog.setMessage("Harap tunggu...");
+        progressDialog.setMessage("Tunggu dulu...");
         progressDialog.setIndeterminate(true);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 finish();
                             } else{
-                                Toast.makeText(LoginActivity.this, "Anda bukan tukang. Gunakan aplikasi konsumen.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Anda bukan tukang. Gunakan aplikasi RumahKita saja.", Toast.LENGTH_SHORT).show();
                             }
                         }
 
@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                     });
                 } else{
                     progressDialog.dismiss();
-                    Toast.makeText(LoginActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login gagal", Toast.LENGTH_SHORT).show();
                 }
             }
         });
