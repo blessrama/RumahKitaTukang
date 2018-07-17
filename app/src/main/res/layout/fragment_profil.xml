@@ -71,7 +71,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/worker_profile_name"
+                        android:id="@+id/txtUserName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
@@ -82,7 +82,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/worker_profile_email"
+                        android:id="@+id/txtUserEmailAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
@@ -109,15 +109,15 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/worker_profile_contract_done"
+                        android:id="@+id/txtContractCompleted"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="start"
                         android:layout_margin="10dp"
+                        android:gravity="start"
                         android:text="2"
                         android:textColor="@color/black"
                         android:textSize="36sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/worker_contract_ongoing"
+                        android:id="@+id/txtContractInProgress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -183,11 +183,11 @@
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/worker_profile_phone_number"
+                    android:id="@+id/txtPhoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
                     android:layout_margin="10dp"
+                    android:gravity="end"
                     android:text="08123456789"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
@@ -216,13 +216,13 @@
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/worker_profile_address"
+                    android:id="@+id/txtUserHomeAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="start"
                     android:text="Nandan, Sariharjo, Ngaglik, Sleman Regency, Special Region of Yogyakarta 55581"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
@@ -251,13 +251,13 @@
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/worker_profile_description"
+                    android:id="@+id/txtUserDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="start"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat at tellus non molestie. Praesent nec eleifend odio. Proin vitae magna at nunc porttitor eleifend. "
                     android:textColor="@color/black"
                     android:textSize="14sp" />

@@ -1,5 +1,6 @@
 package blessrama.pkm.rumahkitatukang.fragment;
 
+import android.app.ProgressDialog;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,6 +17,8 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -29,6 +32,7 @@ import java.util.List;
 
 import blessrama.pkm.rumahkitatukang.R;
 import blessrama.pkm.rumahkitatukang.RecyclerViewAdapterJob;
+import blessrama.pkm.rumahkitatukang.activity.LoginActivity;
 import blessrama.pkm.rumahkitatukang.model.Job;
 import blessrama.pkm.rumahkitatukang.model.JobCategory;
 import blessrama.pkm.rumahkitatukang.model.User;
@@ -51,6 +55,8 @@ public class HomeFragment extends Fragment {
     private FirebaseUser firebaseUser;
     private DatabaseReference databaseReference;
 
+    private ProgressDialog progressDialog;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -63,6 +69,12 @@ public class HomeFragment extends Fragment {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         databaseReference = FirebaseDatabase.getInstance().getReference();
+
+        progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Tunggu dulu...");
+        progressDialog.setIndeterminate(true);
+        progressDialog.show();
 
         switchWorkingStatus = view.findViewById(R.id.switchWorkingStatus);
         databaseReference.child("users").child(firebaseUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -118,6 +130,7 @@ public class HomeFragment extends Fragment {
                 recyclerViewAdapterJob = new RecyclerViewAdapterJob(jobList, getContext());
                 recyclerViewJob.setAdapter(recyclerViewAdapterJob);
                 recyclerViewAdapterJob.notifyDataSetChanged();
+                progressDialog.dismiss();
             }
 
             @Override
@@ -131,16 +144,22 @@ public class HomeFragment extends Fragment {
         switchWorkingStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                databaseReference.child("users").child(firebaseUser.getUid()).child("workingStatus").setValue(switchWorkingStatus.isChecked());
-                if (switchWorkingStatus.isChecked()){
-                    txtWorkingStatus.setText("Bekerja");
-                    linearLayoutJob.setVisibility(View.VISIBLE);
-                    linearLayoutInfo.setVisibility(View.GONE);
-                } else{
-                    txtWorkingStatus.setText("Libur");
-                    linearLayoutJob.setVisibility(View.GONE);
-                    linearLayoutInfo.setVisibility(View.VISIBLE);
-                }
+                progressDialog.show();
+                databaseReference.child("users").child(firebaseUser.getUid()).child("workingStatus").setValue(switchWorkingStatus.isChecked()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (switchWorkingStatus.isChecked()){
+                            txtWorkingStatus.setText("Bekerja");
+                            linearLayoutJob.setVisibility(View.VISIBLE);
+                            linearLayoutInfo.setVisibility(View.GONE);
+                        } else{
+                            txtWorkingStatus.setText("Libur");
+                            linearLayoutJob.setVisibility(View.GONE);
+                            linearLayoutInfo.setVisibility(View.VISIBLE);
+                        }
+                        progressDialog.dismiss();
+                    }
+                });
             }
         });
         return view;

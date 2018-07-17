@@ -1,5 +1,6 @@
 package blessrama.pkm.rumahkitatukang.fragment;
 
+import android.app.ProgressDialog;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import java.util.List;
 import blessrama.pkm.rumahkitatukang.R;
 import blessrama.pkm.rumahkitatukang.RecyclerViewAdapterJob;
 import blessrama.pkm.rumahkitatukang.RecyclerViewAdapterJobOnProgress;
+import blessrama.pkm.rumahkitatukang.activity.LoginActivity;
 import blessrama.pkm.rumahkitatukang.model.Job;
 
 public class HistoryTab1 extends Fragment {
@@ -37,12 +39,21 @@ public class HistoryTab1 extends Fragment {
 
     private List<Job> jobList = new ArrayList<>();
 
+    private ProgressDialog progressDialog;
+
     public HistoryTab1() {
 
     }
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.history_tab1_doing, container, false);
+
+        progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Tunggu dulu...");
+        progressDialog.setIndeterminate(true);
+        progressDialog.show();
+
         recyclerViewJobOnProgress = view.findViewById(R.id.recyclerViewJobOnProgress);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
@@ -59,9 +70,10 @@ public class HistoryTab1 extends Fragment {
                     }
                 }
                 recyclerViewJobOnProgress.setLayoutManager(new LinearLayoutManager(getContext()));
-                recyclerViewAdapterJobOnProgress = new RecyclerViewAdapterJobOnProgress(jobList, getContext());
+                recyclerViewAdapterJobOnProgress = new RecyclerViewAdapterJobOnProgress(jobList, getActivity());
                 recyclerViewJobOnProgress.setAdapter(recyclerViewAdapterJobOnProgress);
                 recyclerViewAdapterJobOnProgress.notifyDataSetChanged();
+                progressDialog.dismiss();
             }
 
             @Override
